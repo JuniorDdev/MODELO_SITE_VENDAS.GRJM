@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Store - Eletrônicos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos básicos */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #2b2d42;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        margin: 0 5px;
+        background-color: #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .tab.active {
+        background-color: #ef233c;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .produtos-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .produto {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 250px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .produto:hover {
+        transform: scale(1.03);
+      }
+
+      .produto img {
+        max-width: 100%;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .preco {
+        color: #d90429;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      button {
+        background-color: #2b2d42;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin: 5px 0;
+      }
+
+      button:hover {
+        background-color: #8d99ae;
+      }
+
+      button.carrinho {
+        background-color: #ef233c;
+      }
+
+      button.carrinho:hover {
+        background-color: #d90429;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🛒 Tech Store</h1>
+    </header>
+
+    <nav class="tabs">
+      <div class="tab active" onclick="showTab('vendas')">Promoções</div>
+      <div class="tab" onclick="showTab('produtos')">Catálogo</div>
+    </nav>
+
+    <section id="vendas" class="tab-content active">
+      <h2>🔥 Ofertas Especiais</h2>
+      <div class="produtos-container">
+        <div class="produto">
+          <h3>Mouse USB Gamer</h3>
+          <img src="mouse gamer 1.jpeg" alt="Mouse USB Gamer com LED RGB" />
+          <p class="preco">R$ 59,90</p>
+          <p>Mouse óptico com 6 botões e LED RGB</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Teclado USB Mecânico</h3>
+          <img
+            src="Teclado Mecanico.jpg"
+            alt="Teclado Mecânico com switches azuis"
+          />
+          <p class="preco">R$ 199,90</p>
+          <p>Teclado mecânico com switches azuis</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="tab-content">
+      <h2>📦 Catálogo Completo</h2>
+      <div class="produtos-container">
+        <div class="produto">
+          <h3>Mouse USB</h3>
+          <img src="mouse usb.jpg" alt="Mouse USB comum" />
+          <p class="preco">R$ 49,90</p>
+          <p>Mouse óptico USB 1200DPI</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Teclado Multimídia USB</h3>
+          <img src="Teclado Multimidia USB.jpg" alt="Teclado multimídia USB" />
+          <p class="preco">R$ 89,90</p>
+          <p>Teclado multimídia USB</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Monitor 24"</h3>
+          <img src="monitor 24.jpg" alt="Monitor de 24 polegadas" />
+          <p class="preco">R$ 469,90</p>
+          <p>Monitor LED 24" Full HD</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Joystick USB</h3>
+          <img src="joystick usb.jpg" alt="Joystick" />
+          <p class="preco">R$ 32,75</p>
+          <p>Joystick USB</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Cartão SD 128GB</h3>
+          <img src="cartaosd128gb.png" alt="Cartão" />
+          <p class="preco">R$ 93,40</p>
+          <p>Cartão 128GB</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Kit AMD</h3>
+          <img src="kit AMD.jpg" alt="Kit AMD" />
+          <p class="preco">R$ 2.770,00</p>
+          <p>Kit Amd Ryzen 7 5700x + B550m Aorus Elite AM4 + 16GB 3200MHz</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Pen drive 128GB</h3>
+          <img src="pendrive128gb.png" alt="Pen drive" />
+          <p class="preco">R$ 59,90</p>
+          <p>Pen Drive 128GB Cruzer Blade - Sandisk</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Placa de vídeo</h3>
+          <img src="placa de video.jpg" alt="Placa de vídeo" />
+          <p class="preco">R$ 2.599,00</p>
+          <p>
+            PLACA DE VIDEO NV RTX4060 8GB GDDR6 128 BITS BLACK GF 1-CLICK OC
+            GALAX
+          </p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>SSD 480GB</h3>
+          <img src="ssd 480GB.jpg" alt="SSD" />
+          <p class="preco">R$ 194,56</p>
+          <p>
+            Kingston SSD A400 480GB SATAIII 2.5'' - ideal para notebooks e PCs
+          </p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto">
+          <h3>Memória Ram 16GB</h3>
+          <img src="memória ram.jpeg" alt="Memória Ram 16GB" />
+          <p class="preco">R$ 194,56</p>
+          <p>Memória RAM Rise Mode Diamond 16GB, 3200MHz, DDR4, CL19, Branco</p>
+          <button>Comprar</button>
+          <button class="carrinho">🛒 Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="text-align: center; margin-top: 40px; padding: 20px; color: #666"
+    >
+      ® Tech Store – Todos os direitos reservados.
+    </footer>
+
+    <script>
+      function showTab(tabId) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        document.querySelectorAll(".tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        document.getElementById(tabId).classList.add("active");
+        event.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
